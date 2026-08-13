@@ -17,6 +17,11 @@
 
 html{scroll-behavior:smooth;}
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body{
   background:var(--bg);
   color:var(--text);
@@ -125,6 +130,31 @@ nav a:hover{ color:var(--text); }
 .about-stats{ display:flex; flex-direction:column; gap:1.8rem; justify-content:center; border-left:1px solid var(--line); padding-left:2rem; }
 .stat-num{ display:block; font-family:var(--display); font-size:1.6rem; color:var(--accent-2); font-weight:600; }
 .stat-label{ font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+.hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-frame {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.portrait-image {
+    width: 100%;
+    height: 100%;
+}
+
+.portrait-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
 
 /* ---------- skills ---------- */
 .skills{ padding:5rem 6vw; background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -176,3 +206,248 @@ nav a:hover{ color:var(--text); }
 }
 
 :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+.contact {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px;
+    text-align: center;
+    background: #050816;
+    color: white;
+}
+
+
+.contact-glow {
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#00d9ff;
+    filter:blur(120px);
+    opacity:.25;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:pulseGlow 5s infinite alternate;
+}
+
+
+@keyframes pulseGlow {
+
+    from {
+        transform:translate(-50%,-50%) scale(.8);
+    }
+
+    to {
+        transform:translate(-50%,-50%) scale(1.2);
+    }
+
+}
+
+
+
+.eyebrow {
+    color:#38bdf8;
+    letter-spacing:3px;
+    font-size:.85rem;
+}
+
+
+.status-dot {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:#22c55e;
+    border-radius:50%;
+    margin-right:10px;
+    animation:blink 1.5s infinite;
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity:.3;
+    }
+
+}
+
+
+
+.contact-title {
+
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin:20px 0;
+    animation:slideUp .8s ease;
+
+}
+
+
+.gradient-text {
+
+    background:linear-gradient(
+        90deg,
+        #38bdf8,
+        #a855f7,
+        #22c55e
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+}
+
+
+
+.contact-description {
+
+    max-width:600px;
+    margin:auto;
+    color:#94a3b8;
+    line-height:1.8;
+
+}
+
+
+
+.contact-links {
+
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+
+
+.contact-card {
+
+    width:220px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:18px;
+
+    text-decoration:none;
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    transition:.4s ease;
+
+}
+
+
+
+.contact-card:hover {
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 20px 40px rgba(0,217,255,.25);
+
+}
+
+
+
+.icon {
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0ea5e9;
+
+    border-radius:50%;
+
+    font-weight:bold;
+
+}
+
+
+
+.contact-card small {
+
+    display:block;
+    color:#94a3b8;
+
+}
+
+
+
+.contact-card strong {
+
+    font-size:1rem;
+
+}
+
+
+
+.availability {
+
+    margin-top:45px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:
+    rgba(34,197,94,.1);
+
+    color:#86efac;
+
+}
+
+
+
+.availability span {
+    width:10px;
+    height:10px;
+    background:#22c55e;
+    border-radius:50%;
+    animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+    50% {
+        transform:scale(1.5);
+        opacity:.5;
+    }
+}
+
+.whatsapp-float a {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: waPulse 2s infinite;
+}
+
+@keyframes waPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
