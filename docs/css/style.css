@@ -139,7 +139,8 @@ nav a:hover{ color:var(--text); }
 .portrait-frame {
     width: 320px;
     height: 320px;
-    border-radius: 50%;
+    border-radius: 0%;
+    background: #1a1a1a;
     overflow: hidden;
 }
 
