@@ -51,7 +51,7 @@ a{color:inherit; text-decoration:none;}
   position:sticky; top:0; z-index:10;
   display:flex; justify-content:space-between; align-items:center;
   padding:1.25rem 6vw;
-  background:rgba(11,15,20,.75);
+  background:rgba(44, 59, 78, 0.75);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
@@ -142,11 +142,17 @@ nav a:hover{ color:var(--text); }
     border-radius: 50%;
     background: #1a1a1a;
     overflow: hidden;
+    background: radial-gradient(circle, var(--panel-2), var(--panel));
+    border: 2px solid var(--accent);
+    padding: 12px;
+    box-shadow: 0 0 40px rgba(187, 152, 46, 0.2), inset 0 0 40px rgba(197, 194, 188, 0.1);
 }
 
 .portrait-image {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .portrait-image img {
